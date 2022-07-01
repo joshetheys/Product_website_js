@@ -4,11 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./product-slider/style.css">
+    <link rel="stylesheet" href="./admin.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 <body>
+    <section id="filter" class="text-center">
+        <select name="typeSort" id="typeSort" onchange="typeSort(event)">
+            <option selected value="all">Type</option>
+            <option value="Bag">Bag</option>
+            <option value="Sweater">Sweater</option>
+            <option value="Socks">Socks</option>
+        </select>
+        <select name="characterSort" id="characterSort" onchange="characterSort(event)">
+            <option selected value="all">Character</option>
+            <option value="Van">Van</option>
+            <option value="RJ">RJ</option>
+            <option value="Koya">Koya</option>
+            <option value="Mang">Mang</option>
+            <option value="Shooky">Shooky</option>
+            <option value="Chimmy">Chimmy</option>
+            <option value="Tata">Tata</option>
+            <option value="Cooky">Cooky</option>
+        </select>
+        <select name="discountSort" id="discountSort" onchange="discountSort(event)">
+            <option selected value="all">Discount</option>
+            <option value="25% off">25%</option>
+            <option value="33% off">33%</option>
+        </select>
+        <select name="priceSort" id="priceSort" onchange="priceSort(event)">
+            <option selected value="all">Price</option>
+            <option value="R180">R180</option>
+            <option value="R300">R300</option>
+            <option value="R400">R400</option>
+        </select>
+    </section>
+    <a href="./index.html"><button>Home Page</button></a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Title</th>
+            <th scope="col">Character</th>
+            <th scope="col">Type</th>
+            <th scope="col">Image</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actual Price</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="prodcont">
+          
+        </tbody>
+      </table>
     
-    
+      <!-- bootstrap -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./admin.js"></script>
 </body>
 </html>

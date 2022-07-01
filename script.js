@@ -112,31 +112,36 @@ JSON.parse(localStorage.getItem('product')) :
     actualprice: "R600"
     },
 ];
+
+
+// localStorage.setItem('record',JSON.stringify())
+
 function create(arr){
     let cont = document.getElementById("prodcont");
 
     cont.innerHTML = "";
     // displaying on html
-    arr.forEach((element) => {
-        cont.innerHTML += `<tr>
-        <th scope="row">${element.id}</th>
-        <td>${element.discount}</td>
-        <td>${element.title}</td>
-        <td>${element.character}</td>
-        <td>${element.type}</td>
-        <td><img src="${element.imgURL}" alt=""></td>
-        <td>${element.description}</td>
-        <td>${element.price}</td>
-        <td>${element.actualprice}</td>
-        <td><button class="btn"><i class="bi bi-gear"></i></button></td>
-        <td><button class="btn" onclick= "toDelete(${element.id})" ><i class="bi bi-trash3"></i></button></td>
-      </tr>`
+    arr.forEach(element => {
+        cont.innerHTML += `<div class="col-md-6 text-center">
+        <div class="product-card mx-auto">
+            <div class="product-image"> 
+                <span class="discount-tag">${element.discount}</span>
+                <img src="${element.imgURL}" class="img-fluid w-100" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">${element.title}</h2>
+                <p class="product-short-description">${element.description}</p>
+                <span class="price">${element.price}</span><span class="actual-price">${element.actualprice}</span>
+            </div>
+        </div>
+    </div>`
     });
-}
-create(products);
+}create(products);
 
-// localStorage.clear();
 
+
+// sort type dropdown
 function typeSort(e) {
     const type = e.target.value;
     if (type === "all") {
@@ -152,7 +157,7 @@ function typeSort(e) {
   function characterSort(e) {
     const type = e.target.value;
     if (type === "all") {
-     return create(products);
+      return create(products);
     }
     const filtered = products.filter((item) =>{
         return item.character === type
@@ -181,12 +186,3 @@ function typeSort(e) {
     } );
     create(filtered);
   }
-
-function toDelete (e){
-products.splice(e-1,1);
-products.forEach((element, index) =>{
-    element.id=index+1
-})
-localStorage.setItem('product', JSON.stringify(products));
-create(products);
-}

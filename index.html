@@ -19,7 +19,7 @@
         <div class="navbar">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Admin Page</a></li>
+                <li><a href="admin.html">Admin Page</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
@@ -31,7 +31,36 @@
             <p>Looking for a piece to commemorate your bias? Something to Show what fandom you belong to? Look no further than Triosis!</p>
         </div>
     </div>
-
+    <section id="filter" class="text-center">
+        <select name="typeSort" id="typeSort" onchange="typeSort(event)">
+            <option selected value="all">Type</option>
+            <option value="Bag">Bag</option>
+            <option value="Sweater">Sweater</option>
+            <option value="Socks">Socks</option>
+        </select>
+        <select name="characterSort" id="characterSort" onchange="characterSort(event)">
+            <option selected value="all">Character</option>
+            <option value="Van">Van</option>
+            <option value="RJ">RJ</option>
+            <option value="Koya">Koya</option>
+            <option value="Mang">Mang</option>
+            <option value="Shooky">Shooky</option>
+            <option value="Chimmy">Chimmy</option>
+            <option value="Tata">Tata</option>
+            <option value="Cooky">Cooky</option>
+        </select>
+        <select name="discountSort" id="discountSort" onchange="discountSort(event)">
+            <option selected value="all">Discount</option>
+            <option value="25% off">25%</option>
+            <option value="33% off">33%</option>
+        </select>
+        <select name="priceSort" id="priceSort" onchange="priceSort(event)">
+            <option selected value="all">Price</option>
+            <option value="R180">R180</option>
+            <option value="R300">R300</option>
+            <option value="R400">R400</option>
+        </select>
+    </section>
     <section class="product"> 
         <h2 class="product-category text-center">Our Cutest Products</h2>
         <div class="product-container">
@@ -45,10 +74,10 @@
         <div class="container">
             <p>Website created by Joshé Jade Theys</p>
             <p>Copyright &copy; 2022</p>
-          <div class="social">
+          <!-- <div class="social">
             <a href="https://www.instagram.com/triosis_official/" class="instagram"><i class="bi bi-instagram"
                 style="font-size: 3rem;"></i></a>
-          </div>
+          </div> -->
         </div>
       </footer>
       <!-- JavaScript Bundle with Popper -->

@@ -13,6 +13,8 @@
   background-position: center;
 }
 
+
+
 .navbar {
   width: 85%;
   margin: auto;
@@ -304,4 +306,7 @@ button:hover {
 .collection:nth-child(3) {
   grid-column: span 2;
   margin-bottom: 10px;
+}
+.footer {
+  background-color: #ff7d7d;
 }

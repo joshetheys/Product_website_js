@@ -1,0 +1,11 @@
+td img{
+    height: 80px !important;
+    max-width: 60px !important;
+  }
+
+  @media screen and (max-width:600px) {
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+  }
